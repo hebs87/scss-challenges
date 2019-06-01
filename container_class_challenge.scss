@@ -1,0 +1,20 @@
+/*Your task is to generate the following CSS classes: .container-1, .container-2, .container-3, .container-4.
+You'll find a link to boilerplate files in the hint tab to help get you started. There is a list of colors in
+the challenge2.scss file. Each of those classes should have one of the colors from the list set as a value for
+the background-color property. Use any of the loops you want!*/
+
+/*1. create variable list of colors
+2. use @each keyword to run through each iteration
+3. set it to look for the $color value in the $colors variable
+4. $i: index($colors, $color); ensures that we run through the iterations for each color, thus ensuring that each class is assigned a different color
+5. .container-#{i} creates classes .container-1, .container-2 and so on for each iteration
+6. background color set to $color ensures that each iteration has a different color
+*/
+$colors: #aaa, #bbb, #ccc, #ddd;
+
+@each $color in $colors {
+    $i: index($colors, $color);
+    .container-#{$i} {
+        background-color: $color;
+    }
+}

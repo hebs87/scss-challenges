@@ -1,0 +1,50 @@
+/*Open the file challenge3.scss. Is something wrong with this code? How can we improve it?
+Is something repetitive? Maybe one simple placeholder can help us out...
+.container {
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.wrapper {
+    border: 1px solid #000;
+    float: left;
+    position: relative;
+    border-radius: 10px;
+}
+
+.item {
+    font-size: 14px;
+    border-radius: 10px;
+    font-family: "Sans Pro", sans-serif;
+    font-weight: 700;
+    border: 1px solid #000;
+}
+*/
+
+%divBorder {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.container {
+    width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+    @extend %divBorder;
+}
+
+.wrapper {
+    float: left;
+    position: relative;
+    @extend %divBorder;
+}
+
+.item {
+    font-size: 14px;
+    font-family: "Sans Pro", sans-serif;
+    font-weight: 700;
+    @extend %divBorder;
+}
